@@ -1,0 +1,122 @@
+@extends('backend.layout.main')
+
+@section('content')
+<div id="app">
+
+   <div class="container-fluid  ml-3" >
+    <div class="row">
+      <h1 class="py-3 font-weight-bold ml-2">TEAM TABLE</h1>
+      <img src="{{asset('images/logo/logo-about.png') }}" alt="" style="height: 60px; margin: 3px 0px 0px 10px;">
+
+    </div>
+      <div class="col bg-white">
+      <a type="button" class="btn btn-primary m-3 shadow-sm" href="{{route('team-insert2')}}">
+        <h6 class="text-white font-weight-bold">+ Tambah Team</h6>
+      </a>
+ 
+
+      <table class="table" id="myTable">
+      <thead class="table-dark">
+        <tr class="text-center">
+          <th scope="col">id</th>
+          <th scope="col">gambar</th>
+          <th scope="col">nama</th>
+          <th scope="col">country</th>
+          <th scope="col">founded</th>
+          <th scope="col">president</th>
+          <th scope="col">pelatih</th>
+          <th scope="col">championship</th>
+          <th scope="col">date</th>
+          <th scope="col">time</th>
+          <th scope="col">Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+      @foreach($teams as $team)
+        <tr >
+          <th scope="row">{{ $loop->index + 1}}</th>
+          <td>
+            @if(!empty($team->image))
+            <img src="{{asset('image/teams/'.$team->image)}}"alt=""  style="width:60px;" class="img-thumbnail">
+            @endif
+          </td>
+          <td>{{$team->nama}}</td>         
+          <td>{{$team->country}}</td>         
+          <td>{{$team->founded}}</td>         
+          <td>{{$team->president}}</td>         
+          <td>{{$team->head_coach}}</td>         
+          <td>{{$team->championship}}</td>         
+          <td>{{$team->date}}</td>         
+          <td>{{$team->time}}</td>                    
+          <td>
+              <a type="button" class="btn btn-warning shadow-sm" href="{{ route('team-edit2', ['id'=> $team->id] )}}" >Edit</a>
+              <a href="{{route('team-destroy2', ['id' => $team -> id])}}" class= "btn btn-danger shadow-sm">Hapus</a>
+          </td>
+
+        @endforeach
+
+      </tbody>
+      </table>
+{{-- 
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="py-3 font-weight-bold ml-2">TEAM TABLE</h1>
+        <img src="{{asset('images/logo/logo-about.png') }}" alt="" style="height: 60px; margin: 3px 0px 0px 10px;">
+
+      </div>
+        <div class="row">
+        <div class="col bg-white">
+          <a type="button" class="btn btn-dark m-3 shadow-sm" href="{{route('team-insert')}}">
+            <h6 class="text-white font-weight-bold">+ Tambah Team</h6>
+          </a>
+   
+  
+        <table class="table text-center" id="myTable">
+        <thead class="table-dark">
+          <tr class="">
+            <th class="" scope="col">ID</th>
+            <th scope="col">IMAGE</th>
+            <th scope="col">NAME</th>
+            <th scope="col">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+        @foreach($teams as $team)
+          <tr >
+            <th scope="row">{{ $loop->index + 1}}</th>
+            <td>
+              @if(!empty($team->image))
+              <img src="{{asset('image/teams/'.$team->image)}}"alt=""  style="width:60px;" class="img-thumbnail">
+              @endif
+            </td>
+            <td>{{$team->nama}}</td>         
+        
+            <td class="text-center">
+                <a type="button" class="btn btn-warning shadow-sm" href="{{ route('team-edit', ['id'=> $team->id] )}}" >Edit</a>
+                <a href="{{route('team-destroy', ['id' => $team -> id])}}" class= "btn btn-danger shadow-sm">Hapus</a>
+            </td>
+  
+          @endforeach --}}
+  
+        </tbody>
+        </table>
+        </div>
+        </div>
+      </div>
+  </div>
+     <!-- //modal -->
+     <script src="https://code.jquery.com/jquery-3.0.0.slim.js" integrity="sha256-Gp6hp0H+A7axg1tErCucWeOc38irtkVWpUbBZSj8KCg=" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="{{asset('adminlte/plugins/js/dataTables.min.js ')}}"></script>
+  <script >
+    $(document).ready( function () {
+      $('#myTable').DataTable();
+  } );
+  </script>
+
+  </section>
+
+@endsection
+

@@ -1,0 +1,218 @@
+@media (max-width: 980px) {
+    .cybersport-slogan {
+    padding-top: 12%;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    text-align: center !important;
+    }
+
+    .cybersport-slogan > p {
+        text-align: center !important;
+        font-size: 16px;
+        color: rgb(229, 229, 229);
+        line-height: 26px;
+    }
+
+    .img-landing {
+        height: 100px;
+        display: block;
+        margin: auto;
+    }
+
+    .col-md-7 h4, p {
+        text-align: center;
+    }
+
+    .col-md-6 {
+        text-align: center;
+    }
+
+    .img-responsive {
+    height: 150px !important;
+    object-fit: cover;
+    }
+
+    .main-award-slider .award .name {
+        padding-top: 30px;
+        font-size: 12px !important;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #666;
+        font-family: Montserrat,sans-serif;
+    }
+
+    .box-register {
+        width: 400px !important;
+        height: 700px !important;
+    }
+
+    input[type="submit"] {
+        margin-top: 20px !important;
+    }
+
+    .main-menu > li a {
+        font-size: 25px;
+    }
+
+    .image-erorr {
+        width: 120px;
+        display: block;
+        margin: auto;
+    }
+
+    .error-wrap .error-logo {
+        position: unset !important;
+        transform: translateY(-50%);
+    }
+
+    .error-wrap .error-title .big-text {
+        text-align: center !important;
+        font-size: 60px !important;
+    }
+
+    .error-wrap .error-title .small-text {
+        text-align: center !important;
+    }
+
+    .error-wrap .error-title .back {
+        margin-left: 165px !important;
+    }
+    
+    .top-search {
+        border-style: none !important;
+        float: left !important;
+    }
+
+    .main-slider .nav-arrow {
+        top: 90% !important;
+        transform: translateY(-100%);
+    }
+
+    .staff-item .info {
+        left: auto !important;
+    }
+
+    .main-club-stuff .player-filters {
+        padding-bottom: 34px;
+        text-align: center;
+    }
+
+    .soccer-h4 {
+        text-align: center;
+    }
+
+    .logo-col {
+        width: 100% !important;
+    }
+
+    .logo-gamelab {
+        margin-top: 65px !important;
+    }
+
+    .footer .footer-left .foot-logo {
+        margin-bottom: 27px;
+        display: block !important;
+        margin: auto;
+    }
+
+    .img-footer {
+        margin-bottom: 40px;
+    }
+
+    .footer .foot-left-menu li {
+        padding-bottom: 11px;
+        width: 50%;
+        float: left;
+        color: rgb(163, 163, 163);
+        line-height: unset;
+    }
+
+    .p-center {
+        text-align: left !important;
+    }
+
+    .h2-footer {
+        text-align: center;
+    }
+
+    .contact-list-footer {
+        text-align: center;
+    }
+
+    .text-right {
+        margin-top: 4px !important;
+    }
+
+    .foot-contact .socials li {
+        padding-right: 30px;
+        margin-right: 30px;
+    }
+
+    .foot-contact .res-socials {
+        padding: 14px 0px !important;
+        padding-bottom: 3px;
+        padding-top: 30px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-left: 120px;
+        display: none;
+    }
+
+    .champ-nav-list li {
+        display: inline-flex !important;
+        text-align: center;
+    }
+
+    .row-offcanvas-left .sidebar-offcanvas {
+        left: 0;
+    }
+
+    .sidebar-offcanvas {
+        position: revert;
+        top: 0px;
+        width: 100%;
+    }
+
+    .club-champ h4 {
+        padding-bottom: 0px;
+        text-align: center;
+    }
+
+    .champ-date {
+        text-align: center;
+    }
+
+    .team-res {
+        text-align: center;
+    }
+
+    .hidden-news {
+        display: none;
+    }
+
+    .foot-contact .socials {
+        display: none;
+    }
+
+    .p-footer {
+        text-align: left !important;
+    }
+
+    /* .main-menu li .hidden-li {
+        display: block;
+    } */
+
+    .banner-hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-menu li .hidden-li {
+      display: block !important;
+    }
+  }
+
